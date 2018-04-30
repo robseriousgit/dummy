@@ -1,0 +1,30 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon lib/index.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js",
+    "compile": "babel --presets es2015 -d dist/ lib/",
+    "test": "npm run compile && npm run test:unit && npm run test:integration",
+    "test:unit": "mocha --compilers js:babel-core/register dist/test/unit --exit",
+    "test:integration": "mocha --compilers js:babel-core/register dist/test/integration --exit"
+  },
+  "author": "Rob Cochran",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "restify": "^7.1.1"
+  }
+}

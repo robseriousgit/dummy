@@ -1,0 +1,21 @@
+npm init
+npm install --save-dev nodemon
+npm install --save-dev babel-cli
+npm install --save-dev babel-preset-es2015 babel-preset-stage-2
+npm install --save-dev mocha 
+npm install --save-dev supertest 
+npm install --save-dev babel-register
+npm install --save-dev chai 
+npm install --save restify
+
+mkdir ./lib
+mkdir ./lib/test
+mkdir ./lib/test/integration
+mkdir ./lib/test/unit
+touch ./lib/index.js
+touch ./lib/test/integration/test.test.js
+touch ./lib/test/unit/test.test.js
+mkdir ./dist
+
+
+touch .babelrc
